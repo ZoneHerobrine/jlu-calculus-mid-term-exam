@@ -1,0 +1,385 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{xeCJK}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{background}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage{pifont}
+\usepackage{ifthen}
+
+\geometry{left=2cm,right=2cm,top=1cm,bottom=2.5cm}
+
+% 页眉页脚设置
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt} 
+\fancyfoot[C]{第 \thepage 页（共 7 页）}
+
+% 标题格式设置
+\title{\CJKfamily{hei} 微积分 B I}
+\date{}
+
+% 设置侧边栏作为页面背景
+\backgroundsetup{
+    scale=1,
+    color=black,
+    position=current page.west,
+    vshift=0cm,
+    hshift=1.5cm,
+    contents={
+        \begin{tikzpicture}[remember picture, overlay]
+            \begin{scope}[rotate=120]  % 我勒个魔法数字啊
+                \node[rotate=30, anchor=north] at (0.5cm, 0) {\textbf{专业\underline{\hspace{8em}} \hspace{2em} 姓名\underline{\hspace{8em}} \hspace{2em} 班级 \underline{\hspace{8em}}\hspace{2em} 学号\underline{\hspace{8em}}}};
+                \node[rotate=30, anchor=north] at (-0.2cm, 0) {\textbf{装\hspace{8em}订\hspace{8em}线}};
+                \draw[line width=0.5pt] (-0.8cm, -12.5cm) -- (-0.8cm, 13.5cm);
+            \end{scope}
+        \end{tikzpicture}
+    }
+}
+
+\begin{document}
+
+\noindent
+\textbf{保密\ding{72}2024年11月16日前}\\
+
+\begin{center}
+    {\LARGE \textbf{\spaceskip=4pt 吉林大学通信工程学院期中模拟考试试题册}}\\[1.5em]
+    {\LARGE \textbf{\spaceskip=4pt 《微积分 B I》答案与评分标准}}
+\end{center}
+
+\noindent
+\textbf{注意事项:}
+\begin{enumerate}[itemsep=0.2pt]
+    \item 答题前，考生务必在试题册及答题卡指定位置上填写姓名、学号和考生姓名。
+    \item 选择题的答案必须填写在答题卡相应题号的指定位置，非选择题的答案必须填写在答题卡指定位置的边框区域内。超出答题区域内书写的答案无效；在草稿纸、试题册上答题无效。
+    \item 填（书）写部分必须使用黑色字迹签字笔书写，字迹工整，笔迹清楚。
+    \item 考试结束，将答题卡和试题册按规定交回。
+\end{enumerate}
+
+\noindent
+\textbf{一、选择题：本题共6小题，每小题4分，共24分。在每小题给出的四个选项中，只有一项是符合题目要求的。}
+
+\begin{enumerate}
+    \item[]\textbf{选择题答案：CDADBD\textcolor{red}{监考的时候发现专门出出来送分的第一题就错了好多...?}} 
+
+    \item 当 \( x \to 0 \) 时，若 \( x - \tan x \)与\( x^k \)是同阶无穷小，则 \( k \) = 
+    \begin{multicols}{4}
+        \begin{itemize}
+            \item[(A)] \( 1 \)
+            \item[(B)] \( 2 \)
+            \textcolor{red}{\item[(C)] \( 3 \)}
+            \item[(D)] \( 4 \)
+        \end{itemize}
+    \end{multicols}
+    
+
+    \item 已知 \( f(x) \) 在 \( x=0 \) 的某个邻域内连续，且 \( \underset{x \to 0}{\lim} \dfrac{f(x)}{1 - \cos x} = 2 \)，则\( f(x) \)在点 \( x=0 \) 处
+    \begin{multicols}{2}
+        \begin{itemize}
+            \item[(A)] 不可导
+            \item[(B)] 可导，且 \( f'(0) \neq 0 \)
+            \item[(C)] 取得极大值
+            \textcolor{red}{\item[(D)] 取得极小值}
+        \end{itemize}
+    \end{multicols}
+
+    \item 设函数 \( f(x) = \dfrac{\ln \left| x \right| }{\left| x - 1 \right|}\sin x \)，则 \( f(x) \) 有
+    \begin{multicols}{2}
+        \begin{itemize}
+            \item[\textcolor{red}{(A)}] \textcolor{red}{l个可去间断点，1个跳跃间断点}
+            \item[(B)] l个可去间断点，1个无穷间断点
+            \item[(C)] 2个跳跃间断点
+            \item[(D)] 2个无穷间断点
+        \end{itemize}
+    \end{multicols}
+
+    \item 已知极限 \( \underset{x \to 0}{\lim} \dfrac{\tan{2x}+xf(x)}{\sin{x^3}}=0 \)，则\( \underset{x \to 0}{\lim}\dfrac{2+f(x)}{x^2} \) = 
+    \begin{multicols}{4}
+        \begin{itemize}
+            \item[(A)] \( \dfrac{13}{9} \)
+            \item[(B)] \( 4 \)
+            \item[(C)] \( \dfrac{10}{3} \)
+            \textcolor{red}{\item[(D)] \( -\dfrac{8}{3} \)}
+        \end{itemize}
+    \end{multicols}
+
+
+    \item 设 \( f(x) \) 在区间$[-2,2]$可导，且\( f'(x) > f(x) > 0 \)，则 
+    \begin{multicols}{4}
+        \begin{itemize}
+            \item[(A)] $\dfrac{f(-2)}{f(-1)} > 1 $
+            \textcolor{red}{\item[(B)] $\dfrac{f(0)}{f(-1)} > e $}
+            \item[(C)] $\dfrac{f(1)}{f(-1)} > e^2 $
+            \item[(D)] $\dfrac{f(2)}{f(-1)} > e^3 $
+        \end{itemize}
+    \end{multicols}
+
+    \item 设 $f(x)=(x-1)^n x^{2n} \sin{\dfrac{\pi}{2}x}$，则$f^{(n)}(1)=$
+    \begin{multicols}{4}
+        \begin{itemize}
+            \item[(A)] $ 1 $
+            \item[(B)] $ 0 $
+            \item[(C)] $ (n-1)! $
+            \textcolor{red}{\item[(D)] $ n! $}
+        \end{itemize}
+    \end{multicols}
+
+
+    % 继续添加选择题
+\end{enumerate}
+
+
+
+\newpage
+
+\noindent
+\textbf{二、填空题：本题共6小题，每小题4分，共24分。}
+
+\begin{enumerate}
+    \item[] \textbf{填空题答案：}\\[0.5em]
+    \textbf{
+        \begin{tabular}{lll}
+        7. $1$ \hfill & 8. \( -\pi \) \hfill & 9. \(-(n-1)!\) \\
+        10. $2$ \hfill & 11. \( -\dfrac{[1-f'(y)]^2-f''(y)}{x^2[1-f'(y)]^3} \) \hfill & 12. \(e^{-\frac{8}{3}}\) \\
+    \end{tabular}
+    }
+
+    \item[7.] 求极限 $\underset{x \to 0}{\lim} \dfrac{\ln \sin 3x}{\ln \sin 2x} = $\underline{\qquad\textcolor{red}{1}\qquad}。
+    
+    \item[8.] 设 $y = (1+\sin{x})^x$，则 $\left. \dfrac{dy}{dx} \right|_{x=\pi} = $\underline{\qquad\textcolor{red}{$-\pi$}\qquad}。
+    
+    \item[9.] 设 $f(x) = \ln{(1-x)} $，则 $ f^{(n)}(0) $ = \underline{\qquad\textcolor{red}{$-(n-1)!$}\qquad}。
+    
+    \item[10.] 曲线 \( y = \dfrac{x^2 +x}{x^2 -1} \)的渐近线的条数为\underline{\qquad\textcolor{red}{2}\qquad}。
+
+    \item[11.] 由方程 \( xe^{f(y)} = e^y \ln{39} \) 可确定函数 \( y = y(x) \)，其中\(f \)具有二阶导数, 且\(f'\neq1\)，则有 \( \dfrac{d^2 y}{dx^2} \) = \underline{\qquad\textcolor{red}{$-\dfrac{[1-f'(y)]^2-f''(y)}{x^2[1-f'(y)]^3}$}\qquad}。
+
+    \item[12.] 设函数 \( f(x) \) 在 \( x = 1 \) 的某邻域内连续，且满足 \( f(x) = 1 + 2x + o(x - 1) \)，则 \( \underset{n \to \infty}{\lim} \left[ \dfrac{f\left(1 - \dfrac{4}{n}\right)}{f(1)} \right]^n =\) \underline{\qquad\textcolor{red}{$e^{-\frac{8}{3}}$}\qquad} 。
+
+\end{enumerate}
+
+\noindent
+\textbf{三、解答题：本题共 5 小题，共 44 分。解答应写出必要的文字说明及演算步骤。}
+
+\begin{enumerate}
+    \item[13.]（本小题满分8分）求极限 \( \underset{n \to \infty}{\lim} n^2 \left( \arctan \dfrac{2}{n} - \arctan \dfrac{2}{n+1} \right) \)。\\
+    \textcolor{red}{
+    法一：拉格朗日中值定理\\[0.5em]
+    解: 由拉格朗日中值定理，易知$\exists \xi \in (\dfrac{2}{n},\dfrac{2}{n+1})$使得$\arctan{x}=\dfrac{1}{1 + \xi^2} \left( \dfrac{2}{n} - \dfrac{2}{n+1} \right)$\\[0.5em]
+    其中 $\xi$ 介于 $\dfrac{a}{n+1}$ 和 $\dfrac{a}{n}$ 之间，易知当 $n \to \infty$ 时, $\xi \to 0$.  \qquad\qquad 2分
+    \begin{align*}
+    \therefore L
+    &= \lim_{n \to \infty} n^2 \cdot \frac{1}{1 + \xi^2} \left( \frac{2}{n} - \frac{4}{n+1} \right)   \quad & \text{4分}\\
+    &= \lim_{n \to \infty} n^2 \cdot \frac{1}{1 + \xi^2} \cdot \frac{2}{n(n+1)} \\
+    &= \lim_{n \to \infty} \frac{2}{1 + \frac{1}{n}} \cdot \frac{1}{1 + \xi^2} \quad & \text{6分}\\
+    &= \frac{2}{1 + 0} \cdot \frac{1}{1 + 0^2} \\
+    &= 2.  \quad & \text{8分}
+    \end{align*}
+    }
+
+    \textcolor{red}{
+    法二：泰勒展开\\[0.5em]
+    解: 易知 $\arctan(x)$，在 $x = 0$ 处展开 $f(x)$ 的泰勒级数为$\arctan(x) = x - \frac{x^3}{3} + O(x^5)$
+    \begin{align*}
+    \therefore L 
+    &= \lim_{n \to \infty} n^2 \left[\left( \frac{2}{n} - \frac{2}{n+1} \right) - \frac{1}{3} \left( \frac{2}{n} \right)^3- \frac{1}{3}\left( \frac{2}{n+1} \right)^3 + O\left( \frac{1}{n^5} \right) \right]   \quad & \text{2分} \\
+    &= \lim_{n \to \infty} n^2 \left( \frac{2}{n(n+1)} - \frac{2^3}{3n^3} - \frac{2^3}{3(n+1)^3} + O\left( \frac{1}{n^5} \right) \right) \\
+    &= \lim_{n \to \infty} \left[ \frac{2n^2}{n^2+n} - \frac{2^3n^2}{3n^3} - \frac{2^3n^2}{3(n+1)^3} + O\left( \frac{1}{n^5} \right)n^2 \right]   \quad & \text{4分}\\
+    &= \lim_{n \to \infty} \left[ \frac{2}{1 + \frac{1}{n}} - 0 - 0 + O\left( \frac{1}{n^3} \right) \right]   \quad & \text{6分}\\
+    &= \lim_{n \to \infty} \frac{2}{1 + \frac{1}{n}} \\
+    &= 2. \quad & \text{8分}
+    \end{align*}
+    }
+
+    \textcolor{red}{
+    法三：洛必达\\[0.5em]
+    解: 先转换成分式形式就可以洛了
+    \begin{align*}
+    \therefore L
+    &= \lim_{n \to \infty} \frac{\arctan \frac{2}{n} - \arctan \frac{2}{n\left(1+\frac{1}{n}\right)}}{\frac{1}{n^2}}  \quad & \text{2分}\\
+    &= \lim_{x \to 0^+} \frac{\arctan{2x} - \arctan \frac{2x}{1+x}}{x^2}  \quad & \text{4分}\\
+    &= \lim_{x \to 0^+} \dfrac{\frac{2}{1 + 4x^2} - \frac{1}{1 + \frac{4x^2}{(1 + x)^2}} \cdot \frac{2(1 + x) - 2x}{(1 + x)^2}}{2x}  \quad & \text{6分}\\
+    &= \lim_{x \to 0^+} \frac{(1 + x)^2 - 1}{x(1 + 4x^2)[(1 + x)^2 + 4x^2]}\\
+    &= \lim_{x \to 0^+} \frac{2 + x}{(1 + 4x^2)[(1 + x)^2 + 4x^2]} \\
+    &= 2. \quad & \text{8分}
+    \end{align*}
+    }
+
+
+
+    \item[14.]（本小题满分8分）设 $f(x) $在点$x=1 $处导数连续，且$f'(1)=1$,求$\underset{x \to 0}{\lim}\dfrac{1}{x}\dfrac{d}{dx}f(\cos^2{2x})$。
+    \textcolor{red}{
+        解:
+        \begin{align*}
+        \frac{d}{dx} f(\cos^2 2x) 
+        &= f'(\cos^2 2x) \cdot (2 \cos 2x) \cdot (-\sin 2x) \cdot 2 \\
+        &= (-2 \sin 4x) f'(\cos^2 2x) \quad & \text{3分} \\
+        \text{则原式}
+        &= \lim_{x \to 0} \frac{-2 \sin 4x \cdot f'(\cos^2 2x)}{x} \\
+        &= (-2) \lim_{x \to 0} \frac{4x \cdot f'(\cos^2 2x)}{x} \quad & \text{5分} \\
+        &= (-8) f'(1) = -8 \quad & \text{8分}
+        \end{align*}
+        （本题节选自微积分习题课教程综合测试题一）
+    }
+    \item[15.]（本小题满分10分）试确定常数 \( a, b \) 的值，使函数
+    \[
+    f(x) = \begin{cases}
+        x^2 \sin{\dfrac{\pi}{x}}, & x \leq 0, \hfill \textcolor{red}{x < 0,}\\
+        ax^2 + b, & x > 0 \hfill \textcolor{red}{x \geq 0}
+    \end{cases}
+    \]
+    \textcolor{red}{注：这里的定义域其实也有点小问题，早十监考的时候有同学指出来了，其实等于号应该在大于号这边，但也是不影响做题就是了(逃)}\\
+    在 \( x = 0 \) 处可导，并求出此时的 \( f'(x) \)。
+
+    \textcolor{red}{
+    解：
+    \begin{align*}
+        \text{由题知} \quad& \lim_{x \to 0} x^2 \sin \frac{\pi}{x} = (a x^2 + b)|_{x=0} = b,  \quad & \text{2分}\\
+        \text{且} \quad& \lim_{x \to 0} x^2 \sin \frac{\pi}{x} = 0 \quad & \text{3分} \\
+        \therefore\quad& b = 0  \quad & \text{4分}\\
+        \text{又} \quad& f'(0) = \lim_{x \to 0} \frac{x^2 \sin \frac{\pi}{x} - 0}{x} = 0, \quad f'_+(0) = \lim_{x \to 0^+} \frac{a x^2 - 0}{x} = 0,  \quad & \text{6分}\\
+        \therefore \quad& f'(0) = 0 \text{, 且} a \text{可以为任意常数}  \quad & \text{8分} \\
+        \text{可求得} \quad& f'(x) = \begin{cases}
+                2x \sin{\dfrac{\pi}{x}} - \pi \cos{\dfrac{\pi}{x}}, & x < 0, \\
+                2ax, & x \geq 0
+            \end{cases} \quad & \text{10分}
+    \end{align*}
+    }
+
+    \item[16.]（本小题满分10分）设函数 \( y=y(x) \)由
+    \[
+    \begin{cases}
+        x=\ln{(1+t^2)}+1, \\
+        y=2\arctan{t} - (t+1)^2
+    \end{cases}
+    \]
+    确定，求\( \dfrac{dy}{dx} \)与\( \dfrac{d^2 y}{dx^2} \)。
+
+    \textcolor{red}{
+    解：
+    \begin{align*}
+        & \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{\frac{2}{1+t^2} - 2(t+1)}{\frac{2t}{1+t^2}} = -(t^2 + t + 1),  \quad & \text{4分} \\
+        & \frac{d^2 y}{dx^2} = \frac{\frac{dx}{dt} \cdot \frac{d^2 y}{dt^2} - \frac{d^2 x}{dt^2} \cdot \frac{dy}{dt}}{\left( \frac{dx}{dt} \right)^3} = \frac{\frac{2t}{1+t^2} \cdot \left[ -\frac{4t}{(1+t^2)^2} - 2 \right] - \frac{2 - 2t^2}{(1+t^2)^2} \cdot \left[ \frac{2}{1+t^2} - 2(t+1) \right]}{\frac{8t^3}{(1+t^2)^3}} \\
+        &\quad \quad = -\frac{(1+2t)(1+t^2)}{2t},  \quad & \text{10分}\\
+        \text{也可以直接} \quad & \frac{d^2 y}{dx^2} = \frac{d}{dt} \left[ -(t^2 + t + 1) \right] \cdot \frac{dt}{dx} = \frac{\frac{d}{dt} \left[ -(t^2 + t + 1) \right]}{\frac{dx}{dt}} = -\frac{(1+2t)(1+t^2)}{2t}.  \quad & \text{10分}
+        \end{align*}
+    }
+
+    \item[17.]（本小题满分8分）设$f(x)=e^{-\dfrac{1}{x^2}}(x\neq0),f(0)=0$, 求$f^{(n)}(0)$ \\
+    \textcolor{red}{
+    此题在吉米多维奇《数学分析习题集》【1225】以及裴礼文《数学分析中的典型问题与方法》（第2版）【3.1.13】中均有收录，主要考察的也就是归纳法求n阶导数了\\
+    这里的话采分点主要设在以下几个方面：\\
+    \begin{align*}
+        & \text{求出} f'(x)\text{或者} f'(0)  & \text{1分} \\
+        & \text{求出} f''(x)\text{或者} f''(0)  & \text{2分} \\
+        & \text{得出结果为0} \quad & \text{4分} \\
+        & \text{过程：构造多项式p} \quad & \text{6分} \\
+        & \text{过程：严格使用归纳法证明} \quad & \text{8分} \\
+        \end{align*}
+    }
+
+    \textcolor{red}{
+    附一：吉米多维奇【1225】证法\\
+    解：
+    \begin{align*}
+        & \text{证：当 } x \neq 0 \text{ 时，} f^{(n)}(x) = \frac{2}{x^2} e^{-\frac{1}{x^2}} P_n \left( \frac{1}{x} \right). \\
+        & \text{下面我们指出，对于任何正整数 } n \text{，均有} f^{(n)}(x) = e^{-\frac{1}{x^2}} P_n \left( \frac{1}{x} \right) \quad (x \neq 0),\\
+        & \text{其中 } P_n(t) \text{ 是关于 } t \text{ 的多项式。现用数学归纳法证明之：} \\[0.5em]
+        & \text{当 } n = 1 \text{ 时，命题显然成立。} \\
+        & \text{设当 } n = k \text{ 时命题成立，即 } f^{(k)}(x) = e^{-\frac{1}{x^2}} P_k \left( \frac{1}{x} \right)，P_k(t) \text{ 是关于 } t \text{ 的某多项式，} \\
+        & \text{要证明命题对于 } n = k+1 \text{ 时也成立。事实上，有} \\
+        & f^{(k+1)}(x) = \left[ e^{-\frac{1}{x^2}} P_k \left( \frac{1}{x} \right) \right]' = -\frac{2}{x^3} e^{-\frac{1}{x^2}} P_k \left( \frac{1}{x} \right) + e^{-\frac{1}{x^2}} P_k' \left( \frac{1}{x} \right) \cdot \left( -\frac{1}{x^2} \right) \\
+        & \qquad \qquad = e^{-\frac{1}{x^2}} \left[ \frac{2}{x} \left( -\frac{1}{x} \right) P_k \left( \frac{1}{x} \right) + \left( -\frac{1}{x^2} \right)^2 P_k' \left( \frac{1}{x} \right) \right] \\
+        & \qquad \qquad = e^{-\frac{1}{x^2}} \left( 2 \left( \frac{1}{x} \right) P_k \left( \frac{1}{x} \right) - \left( \frac{1}{x} \right)^2 P_k' \left( \frac{1}{x} \right) \right) = e^{-\frac{1}{x^2}} P_{k+1} \left( \frac{1}{x} \right), \\
+        & \text{其中 } P_{k+1}(t) \text{ 是关于 } t \text{ 的另一多项式。} \\[0.5em]
+        & \text{于是，命题对于一切正整数 } n \text{ 均成立。} \\[0.5em]
+        & \text{现在，证明函数 } f(x) \text{ 在 } x = 0 \text{ 处是无穷次可微的} \\
+        & \text{首先，注意到} f'(0) = \lim_{x \to 0} \frac{f(x) - f(0)}{x} = \lim_{x \to 0} \frac{x^2 e^{-\frac{1}{x^2}}}{x} = \lim_{x \to 0} x e^{-\frac{1}{x^2}} = 0, \\[0.5em]
+        & \text{根据最末一式的极限求法可参看【654】题(2)。} \\[0.5em]
+        & \text{仍用此法，设 }f^{(n)}(0) = 0， \text{则可证明 } f^{(n+1)}(0) = 0。 \\
+        & \text{事实上，有} f^{(n+1)}(0) = \lim_{x \to 0} \frac{f^{(n)}(x)}{x} = \lim_{x \to 0} \frac{1}{x} P_n \left( \frac{1}{x} \right) e^{-\frac{1}{x^2}} = 0。 \\
+        & \text{其中 } P_n(t) = t^p \text{ 也是 } t \text{ 的多项式。} \\[0.5em]
+        & \text{由数学归纳法可知，} f^{(n)}(0) = 0 \text{ 对于一切正整数 } n \text{ 均成立}\\[0.5em]
+        & \text{即函数}  f(x) \text{ 在 } x = 0  \text{处无穷次可微，且其n阶导数为零.}\\
+        \end{align*}
+    }
+    \textcolor{red}{
+    注：吉米多维奇【654】其实就是证明$\underset{x \to 0}{\lim}\dfrac{e^{-\frac{1}{x^2}}}{x^n}=0$，用到的是【591】（即$\underset{x \to 0}{\lim}\dfrac{e^{-\frac{1}{x^2}}}{x^{100}}=0$）用到的【564】题（即$\underset{x \to \infty}{\lim}\dfrac{x^n}{a^x}=0, (a>0,n>0)$）用到的【60】题的结论（即$\underset{n \to \infty}{\lim}\dfrac{n^k}{a^n}=0, (n>1)$）\\
+    （他确实很喜欢用前面的题直接作为结论然后一题一题套下去）\\[5em]
+    }
+    
+    \textcolor{red}{
+    附二：裴礼文（第2版）【3.1.13】证法\\
+    解：
+    \begin{align*}
+        & \text{易知}f'(0) = \lim_{x \to 0} \frac{e^{-\frac{1}{x}} - 0}{x - 0} = \lim_{x \to 0} \frac{\frac{1}{x}}{e^{\frac{1}{x}}} = \lim_{y \to +\infty} \frac{y}{e^y} = 0. \\
+        & \text{设} f^{(n-1)}(0) = 0 \\
+        & \because \text{易证} f^{(n-1)}(x) = p\left( \frac{1}{x} \right) e^{-\frac{1}{x}} \quad (x \ne 0), \\
+        & \text{其中} p\left( \frac{1}{x} \right) \text{ 表示关于 } \frac{1}{x} \text{ 的某个多项式} \\
+        & \therefore f^{(n)}(0) = \lim_{x \to 0} \frac{p\left( \frac{1}{x} \right) e^{-\frac{1}{x}} - 0}{x - 0} = \lim_{y \to +\infty} \frac{y p(y)}{e^y} = 0.
+        \end{align*}
+    }
+
+
+
+
+\end{enumerate}
+
+
+\noindent
+\textbf{四、证明题：本题共 1 小题，共 8 分。证明时应写出必要的文字说明及证明过程。}
+
+\begin{enumerate}
+    \item[18.]（本小题满分8分）设 \( f(x) \) 在 \( [0, 1] \) 上连续，在 \( (0, 1) \) 内可导，证明：
+
+    \begin{enumerate}
+        \item[（1）]\(\exists t \in (0, 1) \)，在\( f(0) = f(1) = 0\)时，满足 \( tf'(t)-2f(t) = 0 \)；
+        \item[]\textcolor{red}{编者注： 这一问其实是出的有问题的，因为$\underset{x \to 0}{\lim}\dfrac{f(x)}{x^2}$并未给出为0，但并不影响下面（2）的证明，因为（1）与（2）其实是独立的两个问题；想到的比较好的解决方案：一是把$-$改成$+$然后构造$x^2f(x)$，避免分母为0；二或者是说明$f(x)$二阶可导之后再额外给出$f'(0) = f''(0) = 0$，然后可用洛必达来求出$\underset{x \to 0}{\lim}\dfrac{f(x)}{x^2}=\underset{x \to 0}{\lim}\dfrac{f''(x)}{2}=0$，然后就可以用罗尔定理正常来做了；}\\
+        \item[] \textcolor{red}{
+            下面我们给出按照上述两种方法修正后的题目给出证明，供大家参考证明题过程 \\[1em]
+            证明一:\(\exists t \in (0, 1) \)，在\( f(0) = f(1) = 0\)时，满足 \( tf'(t)+2f(t) = 0 \)；\\
+            证明：
+            \begin{align*}
+            &\text{不妨设} F(x)=x^2f(x), \text{易知} F(0)=F(1)=0 \quad & \text{正确构造，2分}\\
+            &\text{又} \because F'(x)=x^2f(x)+2xf(x)=x(xf'(x)+2f(x)) \\
+            &\text{且} F(x)\text{于}[0,1]\text{连续,} \text{于}(0,1)\text{可导}  \\
+            &\therefore\text{由罗尔定理可得},\exists t \in (0, 1) \text{使得}F'(x)=0 \quad & \text{使用定理，3分}\\ 
+            &\text{又} \because t>0,\text{即证} \exists t \in (0, 1)\text{使得}tf'(t)+2f(t) = 0\quad & \text{最终得证，4分}
+            \end{align*}
+            证明二:已知\(f(x)\)二阶可导，\(\exists t \in (0, 1) \)，在\( f(0) = f(1) = 0\)且\( f'(0) = f''(0) = 0\)时，满足 \( tf'(t)-2f(t) = 0 \)；\\
+            证明：
+            \begin{align*}
+            &\text{不妨设} F(x)=\frac{f(x)}{x^2}, \text{易知} F(1)=0 \quad & \text{正确构造，1分}\\
+            &\text{且} \underset{x \to 0}{\lim}F(x)=\underset{x \to 0}{\lim}\frac{f(x)}{x^2}=\underset{x \to 0}{\lim}\frac{f'(x)}{2x}=\underset{x \to 0}{\lim}\frac{f''(x)}{2}=0 \quad & \text{计算极限，2分}\\
+            &\text{又} \because F'(x)=\frac{x^2f(x)-2xf(x)}{x^4}=\frac{xf(x)-2f(x)}{x^3} \\
+            &\text{且} F(x)\text{于}[0,1]\text{连续,} \text{于}(0,1)\text{可导}  \\
+            &\therefore\text{由罗尔定理可得},\exists t \in (0, 1) \text{使得}F'(x)=0 \quad & \text{使用定理，3分}\\ 
+            &\text{又} \because t>0,\text{即证} \exists t \in (0, 1)\text{使得}tf'(t)+2f(t) = 0\quad & \text{最终得证，4分}\\
+            \end{align*}
+        }
+        \item[]\textcolor{red}{编者再注：事实证明出完卷之后答案也要顺便一起出了，这样就不会出现这样的问题了QAQ，非常抱歉！实际上（1）最主要是想要提示大家能够想到$x^2$的这个构造，最开始出的是加号的，然后让一位大二的同学做了之后发现还是可能想不到(?)，然后我就直接改减号了，然后就喜闻乐见地遇到分母的问题了；}
+        \item[]\textcolor{red}{编者再再注：实际上在监考过程中大家还是能很好地猜测到出题人考察罗尔定理的这个意图，没有同学在考试途中指出这个问题，很多同学其实都避开了这一点熟练地给出了规范的证明233333，面对这种问题题目，大家也要大胆去做，通常判分也会相应地宽松一些，最后改卷过程中只要$\dfrac{f(x)}{x^2}$构造和罗尔定理是对的第一问就给分~。}
+        \item[（2）]\(\exists \xi, \eta \in (0, 1) \)，使得 \( f'(\xi) = \dfrac{f'(\eta)}{2\eta}  \)。
+        \item[] \item[] \textcolor{red}{
+            证明：
+            \begin{align*}
+            &\text{对于}f(x)\text{,由拉格朗日中值定理可得},\\
+            &\exists \xi \in (0, 1) \text{使得}f'(\xi)=\dfrac{f(1)-f(0)}{1-0}=f(1)-f(0) \quad & \text{使用定理，1分}\\ 
+            &\text{不妨设} g(x)=x^2, \text{易知} F(1)=0 \quad & \text{正确构造，2分}\\
+            &\text{对于}f(x)\text{与}g(x)\text{,由柯西中值定理可得},\\
+            &\exists \eta \in (0, 1) \text{使得}\dfrac{f'(\eta)}{g'(\eta)}=\dfrac{f'(\eta)}{2\eta}=\dfrac{f(1)-f(0)}{1^2-0^2}=f(1)-f(0) \quad & \text{使用定理，3分}\\ 
+            &\text{即证} \exists \xi,\eta \in (0, 1)\text{使得}f'(\xi) = \dfrac{f'(\eta)}{2\eta}\quad & \text{最终得证，4分}\\
+            \end{align*}
+            （这一问也是习题课教程综合测试题一里面的，只不过把a和b换成了0和1，也就是将简单构造形式藏了起来w）
+        }
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}

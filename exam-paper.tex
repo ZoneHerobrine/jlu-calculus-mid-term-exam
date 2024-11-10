@@ -1,0 +1,223 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{xeCJK}
+\usepackage{tikz}
+\usepackage{background}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage{pifont}
+\usepackage{ifthen}
+
+\geometry{left=2cm,right=2cm,top=1cm,bottom=2.5cm}
+
+% 页眉页脚设置
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt} 
+\fancyfoot[C]{第 \thepage 页（共 2 页）}
+
+% 标题格式设置
+\title{\CJKfamily{hei} 微积分 B I}
+\date{}
+
+\newif\iffirstpage
+\firstpagetrue % 初始设置为第一页
+
+% 设置侧边栏作为页面背景
+\backgroundsetup{
+    scale=1,
+    color=black,
+    position=current page.west,
+    vshift=0cm,
+    hshift=1.5cm,
+    contents={
+        \begin{tikzpicture}[remember picture, overlay]
+            \begin{scope}[rotate=120]  % 我勒个魔法数字啊
+                \node[rotate=30, anchor=north] at (0.5cm, 0) {\textbf{专业\underline{\hspace{8em}} \hspace{2em} 姓名\underline{\hspace{8em}} \hspace{2em} 班级 \underline{\hspace{8em}}\hspace{2em} 学号\underline{\hspace{8em}}}};
+                \node[rotate=30, anchor=north] at (-0.2cm, 0) {\textbf{装\hspace{8em}订\hspace{8em}线}};
+                \draw[line width=0.5pt] (-0.8cm, -12.5cm) -- (-0.8cm, 13.5cm);
+            \end{scope}
+        \end{tikzpicture}
+    }
+}
+
+\begin{document}
+
+\noindent
+\textbf{保密\ding{72}2024年11月16日前}\\
+
+\begin{center}
+    {\LARGE \textbf{\spaceskip=4pt 吉林大学通信工程学院期中模拟考试试题册}}\\[1.5em]
+    {\LARGE \textbf{\spaceskip=4pt 《微积分 B I》}}
+\end{center}
+
+\noindent
+\textbf{注意事项:}
+\begin{enumerate}[itemsep=0.2pt]
+    \item 答题前，考生务必在试题册及答题卡指定位置上填写姓名、学号和考生姓名。
+    \item 选择题的答案必须填写在答题卡相应题号的指定位置，非选择题的答案必须填写在答题卡指定位置的边框区域内。超出答题区域内书写的答案无效；在草稿纸、试题册上答题无效。
+    \item 填（书）写部分必须使用黑色字迹签字笔书写，字迹工整，笔迹清楚。
+    \item 考试结束，将答题卡和试题册按规定交回。
+\end{enumerate}
+
+\noindent
+\textbf{一、选择题：本题共6小题，每小题4分，共24分。在每小题给出的四个选项中，只有一项是符合题目要求的。}
+
+\begin{enumerate}
+    \item 当 \( x \to 0 \) 时，若 \( x - \tan x \)与\( x^k \)是同阶无穷小，则 \( k \) = 
+    \begin{multicols}{4}
+        \begin{itemize}
+            \item[(A)] \( 1 \)
+            \item[(B)] \( 2 \)
+            \item[(C)] \( 3 \)
+            \item[(D)] \( 4 \)
+        \end{itemize}
+    \end{multicols}
+    
+
+    \item 已知 \( f(x) \) 在 \( x=0 \) 的某个邻域内连续，且 \( \underset{x \to 0}{\lim} \dfrac{f(x)}{1 - \cos x} = 2 \)，则\( f(x) \)在点 \( x=0 \) 处
+    \begin{multicols}{2}
+        \begin{itemize}
+            \item[(A)] 不可导
+            \item[(B)] 可导，且 \( f'(0) \neq 0 \)
+            \item[(C)] 取得极大值
+            \item[(D)] 取得极小值
+        \end{itemize}
+    \end{multicols}
+
+    \item 设函数 \( f(x) = \dfrac{\ln \left| x \right| }{\left| x - 1 \right|}\sin x \)，则 \( f(x) \) 有
+    \begin{multicols}{2}
+        \begin{itemize}
+            \item[(A)] l个可去间断点，1个跳跃间断点
+            \item[(B)] l个可去间断点，1个无穷间断点
+            \item[(C)] 2个跳跃间断点
+            \item[(D)] 2个无穷间断点
+        \end{itemize}
+    \end{multicols}
+
+    \item 已知极限 \( \underset{x \to 0}{\lim} \dfrac{\tan{2x}+xf(x)}{\sin{x^3}}=0 \)，则\( \underset{x \to 0}{\lim}\dfrac{2+f(x)}{x^2} \) = 
+    \begin{multicols}{4}
+        \begin{itemize}
+            \item[(A)] \( \dfrac{13}{9} \)
+            \item[(B)] \( 4 \)
+            \item[(C)] \( \dfrac{10}{3} \)
+            \item[(D)] \( -\dfrac{8}{3} \)
+        \end{itemize}
+    \end{multicols}
+
+
+    \item 设 \( f(x) \) 在区间$[-2,2]$可导，且\( f'(x) > f(x) > 0 \)，则 
+    \begin{multicols}{4}
+        \begin{itemize}
+            \item[(A)] $\dfrac{f(-2)}{f(-1)} > 1 $
+            \item[(B)] $\dfrac{f(0)}{f(-1)} > e $
+            \item[(C)] $\dfrac{f(1)}{f(-1)} > e^2 $
+            \item[(D)] $\dfrac{f(2)}{f(-1)} > e^3 $
+        \end{itemize}
+    \end{multicols}
+
+    \item 设 $f(x)=(x-1)^n x^{2n} \sin{\dfrac{\pi}{2}x}$，则$f^{(n)}(1)=$
+    \begin{multicols}{4}
+        \begin{itemize}
+            \item[(A)] $ 1 $
+            \item[(B)] $ 0 $
+            \item[(C)] $ (n-1)! $
+            \item[(D)] $ n! $
+        \end{itemize}
+    \end{multicols}
+
+
+    % 继续添加选择题
+\end{enumerate}
+
+
+
+\newpage
+
+% 第二页内容
+\firstpagefalse % 设置为第二页
+
+
+\backgroundsetup{
+    scale=1,
+    color=black,
+    position=current page.west,
+    vshift=0cm,
+    hshift=1.5cm,
+    contents={
+        \begin{tikzpicture}[remember picture, overlay]
+            \begin{scope}[rotate=120]  % 我勒个魔法数字啊
+                \draw[line width=0.5pt] (-18.5cm, -12.5cm) -- (-18.5cm, 13.5cm);
+            \end{scope}
+        \end{tikzpicture}
+    }
+}
+
+\noindent
+\textbf{二、填空题：本题共6小题，每小题4分，共24分。}
+
+\begin{enumerate}
+    \item[7.] 求极限 $\underset{x \to 0}{\lim} \dfrac{\ln \sin 3x}{\ln \sin 2x} = $\underline{\qquad\qquad\qquad}。
+    
+    \item[8.] 设 $y = (1+\sin{x})^x$，则 $\left. \dfrac{dy}{dx} \right|_{x=\pi} = $\underline{\qquad\qquad\qquad}。
+    
+    \item[9.] 设 $f(x) = \ln{(1-x)} $，则 $ f^{(n)}(0) $ = \underline{\qquad\qquad\qquad}。
+    
+    \item[10.] 曲线 \( y = \dfrac{x^2 +x}{x^2 -1} \)的渐近线的条数为\underline{\qquad\qquad\qquad}。
+
+    \item[11.] 由方程 \( xe^{f(y)} = e^y \ln{39} \) 可确定函数 \( y = y(x) \)，其中\(f \)具有二阶导数, 且\(f'\neq1\)，则有 \( \dfrac{d^2 y}{dx^2} \) = \underline{\qquad\qquad\qquad}。
+
+    \item[12.] 设函数 \( f(x) \) 在 \( x = 1 \) 的某邻域内连续，且满足 \( f(x) = 1 + 2x + o(x - 1) \)，则 \( \underset{n \to \infty}{\lim} \left[ \dfrac{f\left(1 - \dfrac{4}{n}\right)}{f(1)} \right]^n = \underline{\qquad\qquad\qquad} \)。
+
+\end{enumerate}
+
+\noindent
+\textbf{三、解答题：本题共 5 小题，共 44 分。解答应写出必要的文字说明及演算步骤。}
+
+\begin{enumerate}
+    \item[13.]（本小题满分8分）求极限 \( \underset{n \to \infty}{\lim} n^2 \left( \arctan \dfrac{2}{n} - \arctan \dfrac{2}{n+1} \right) \)。
+
+    \item[14.]（本小题满分8分）设 $f(x) $在点$x=1 $处导数连续，且$f'(1)=1$,求$\underset{x \to 0}{\lim}\dfrac{1}{x}\dfrac{d}{dx}f(\cos^2{2x})$。
+
+    \item[15.]（本小题满分10分）试确定常数 \( a, b \) 的值，使函数
+    \[
+    f(x) = \begin{cases}
+        x^2 \sin{\dfrac{\pi}{x}}, & x \leq 0, \\
+        ax^2 + b, & x > 0
+    \end{cases}
+    \]
+    在 \( x = 0 \) 处可导，并求出此时的 \( f'(x) \)。
+
+
+    \item[16.]（本小题满分10分）设函数 \( y=y(x) \)由
+    \[
+    \begin{cases}
+        x=\ln{(1+t^2)}+1, \\
+        y=2\arctan{t} - (t+1)^2
+    \end{cases}
+    \]
+    确定，求\( \dfrac{dy}{dx} \)与\( \dfrac{d^2 y}{dx^2} \)。
+
+    \item[17.]（本小题满分8分）设$f(x)=e^{-\dfrac{1}{x^2}}(x\neq0),f(0)=0$, 求$f^{(n)}(0)$
+
+\end{enumerate}
+
+
+\noindent
+\textbf{四、证明题：本题共 1 小题，共 8 分。证明时应写出必要的文字说明及证明过程。}
+
+\begin{enumerate}
+    \item[18.]（本小题满分8分）设 \( f(x) \) 在 \( [0, 1] \) 上连续，在 \( (0, 1) \) 内可导，证明：
+
+    \begin{enumerate}
+        \item[（1）]\(\exists t \in (0, 1) \)，在\( f(0) = f(1) = 0\)时，满足 \( tf'(t)-2f(t) = 0 \)；
+        \item[（2）]\(\exists \xi, \eta \in (0, 1) \)，使得 \( f'(\xi) = \dfrac{f'(\eta)}{2\eta}  \)。
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
